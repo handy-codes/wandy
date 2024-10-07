@@ -30,7 +30,7 @@ const AnalyticsPage = async () => {
             <DataCard 
                 label="Total Sales"
                 value={totalSales}
-                shouldFormat={false}
+                // shouldFormat={false}
             />
         </div>
         <Chart data={data} />

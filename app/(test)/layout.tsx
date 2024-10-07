@@ -1,11 +1,15 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+
 import { db } from "@/lib/db";
+
 import { getProgress } from "@/actions/get-progress";
+
 import getSafeProfile from "@/actions/get-safe-profile";
 import { CourseNavbar } from "../(course)/_components/course-navbar";
 import { CourseSidebar } from "./_components/course-sidebar";
 // import { CourseNavbar } from "./_components/course-navbar";
+// import { CourseSidebar } from "./_components/course-sidebar";
 
 const CourseLayout = async ({
   children,
@@ -18,10 +22,10 @@ const CourseLayout = async ({
   if (!userId) {
     return redirect("/")
   }
-  // const safeProfile = await getSafeProfile();
-  // if (!safeProfile) {
-  //   return redirect("/");
-  // }
+  const safeProfile = await getSafeProfile();
+  if (!safeProfile) {
+    return redirect("/");
+  }
 
   const course = await db.course.findUnique({
     where: {
@@ -61,7 +65,7 @@ const CourseLayout = async ({
         <CourseNavbar
           course={course}
           progressCount={progressCount}
-          // currentProfile={safeProfile}
+          currentProfile={safeProfile}
         />
       </div>
       <div className="hidden md:flex h-full w-80 flex-col fixed inset-y-0 z-50">
@@ -79,7 +83,12 @@ const CourseLayout = async ({
 }
 
 
-export default CourseLayout
+export default CourseLayout
+
+
+
+
+
 
 
 // export default function Layout({ children }: { children: React.ReactNode }) {
@@ -90,6 +99,6 @@ export default CourseLayout
 //         <h1>owo</h1>
 //       </div>
 //       <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
-//  </div>
+//     </div>
 //   );
 // }

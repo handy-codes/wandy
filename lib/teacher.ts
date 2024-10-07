@@ -1,3 +1,10 @@
+import { currentProfile } from "./current-profile"
+
+export const isTeacher = async () => {
+    return userId === process.env.NEXT_PUBLIC_TEACHER_ID;
+}
+
+
 // import { currentProfile } from "./current-profile"
 
 // export const isTeacher = async () => {

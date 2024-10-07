@@ -46,9 +46,9 @@ const SearchPage = async ({
         />
         <CoursesList items={courses} />
       </div>
-      <Link href={`/testing/[Id]}`}>
+      {/* <Link href={`/testing/[Id]}`}>
         Lets go
-      </Link>
+      </Link> */}
     </>
    );
 }

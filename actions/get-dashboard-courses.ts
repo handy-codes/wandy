@@ -18,7 +18,7 @@ export const getDashboardCourses = async (userId: string): Promise<DashboardCour
 
         const purchasedCourses = await db.purchase.findMany({
             where: {
-                userId
+                userId: userId,
             },
             select: {
                 course: {
@@ -48,14 +48,14 @@ export const getDashboardCourses = async (userId: string): Promise<DashboardCour
 
         return {
             completedCourses,
-            coursesInProgress
+            coursesInProgress,
         }
 
     } catch (error) {
         console.log("[GET_DASHBOARD_COURSES]: ", error);
         return  {
             completedCourses: [],
-            coursesInProgress: []
+            coursesInProgress: [],
         }
     }
 }

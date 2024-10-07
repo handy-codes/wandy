@@ -1,0 +1,43 @@
+.maker{
+    border: 10px solid #003E8F;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://www.cloneshouse.com/wp-content/uploads/2024/06/Screenshot-2024-06-21-at-13.52.51.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.maker h1{
+    color: white;
+} 
+
+.maker-para p{
+    color: black;
+}
+
+.cover{
+    display: flex;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+    margin-top: 150px;
+}
+
+.first, .second{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(128, 249, 6);
+}
+
+.first:hover{
+    background-color: red;   
+}
+.first p:hover{
+    color: red;
+}

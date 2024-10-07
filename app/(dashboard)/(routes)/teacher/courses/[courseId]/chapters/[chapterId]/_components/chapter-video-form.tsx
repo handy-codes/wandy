@@ -39,9 +39,11 @@ export const ChapterVideoForm = ({
       toast.success("Chapter updated");
       toggleEdit();
       router.refresh();
-      const baseUrl = process.env.NEXT_PUBLIC_APP_URL;
-      const url = `${baseUrl}/teacher/courses/${courseId}/chapters/${chapterId}`;
-      window.location.assign(url);
+      // window.location.reload();
+      // const baseUrl = process.env.NEXT_PUBLIC_APP_URL;
+      // const url = `${baseUrl}/teacher/courses/${courseId}/chapters/${chapterId}`;
+      // window.location.assign(url);
+      // window.location.assign(url);
 
     } catch {
       toast.error("Something went wrong");
@@ -87,7 +89,6 @@ export const ChapterVideoForm = ({
         <div>
           <FileUpload
             endpoint="chapterVideo"
-            // endpoint="courseImage"
             onChange={(url) => {
               if (url) {
                 onSubmit({ videoUrl: url });

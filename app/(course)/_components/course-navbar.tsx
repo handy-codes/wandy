@@ -29,7 +29,7 @@ export const CourseNavbar = ({
           course={course}
           progressCount={progressCount}
         />
-        <NavbarRoutes currentProfile={currentProfile} />      
+        {/* <NavbarRoutes currentProfile={currentProfile} />       */}
         <NavbarRoutes  />      
       </div>
 

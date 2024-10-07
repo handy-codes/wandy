@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+  image: mysql:latest
+
+  container_name: mysql_local
+  
+  ports:
+    - "3306:3306"
+  restart: always
+
+  environment:
+   MYSQL_ROOT_PASSWORD: root_password
+   MYSQL_ROOT_DATABASE: example_db
+   MYSQL_USER: example_user
+   MYSQL_PASSWORD: example_password
+
+  volumes:
+   - mysql-data:/var/lib/mysql/data
+
+
+#   networks:
+#    - mysql_network
+
+# volumes:
+#   mysql-data:
+
+# networks:
+#   mysql-network:
+
+
+# docker-compose up -d
+# services.volumes must be a mapping

@@ -4,7 +4,7 @@ import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 import { useDebounce } from "@/hooks/use-debounce";
-import { usePathname, useRouter } from "next/navigation";
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import qs from "query-string";
 
 export const SearchInput = () => {
@@ -12,7 +12,7 @@ export const SearchInput = () => {
     const [value, setValue] = useState("");
     const debouncedValue = useDebounce(value, 500);
 
-    const searchParams = new URLSearchParams();
+    const searchParams = useSearchParams();
     const router = useRouter();
     const pathname = usePathname();
     

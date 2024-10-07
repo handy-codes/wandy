@@ -12,7 +12,7 @@ import { useConfettiStore } from "@/hooks/use-confetti-store";
 
 interface VideoPlayerProps {
     // playbackId?: string | null;
-    playbackId: string | null;
+    playbackId: string;
     courseId: string;
     chapterId: string;
     nextChapterId?: string;

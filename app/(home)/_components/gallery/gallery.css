@@ -1,0 +1,94 @@
+.gallery-cover{
+    background-color: #013A12;
+    height: 100vh;
+}
+
+.levels{
+    height: 25vh;
+    width: 75vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.levels h2{
+    color: white;
+    font-family: Macan, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+
+.levels .deliver{
+    color: #1DBF73;
+    margin-left: 0;
+    font-family: "Domaine Display", Domaine Display, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* line-height: 64px; */
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+}
+
+.levels h4{
+    color: white;
+    font-family: Macan, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+
+
+.one{
+    height: 75vh;
+    width: 75vw;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    /* border: 1px solid #ddd; */
+    display: flex;
+    overflow-x: auto;
+    }
+
+.one .unit{
+    /* min-width: 110px; */
+    min-width: 70vw;
+    min-height: 100%;
+    /* line-height: 110px; */
+    text-align: center;
+    margin-right: 2px;
+}
+
+.one .unit img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.one::-webkit-scrollbar{
+    width: 0;
+}
+
+
+.two{
+    background-color: red;
+}
+
+.three{
+    background-color: blue;
+}
+
+.four{
+    background-color: yellowgreen;
+}
+
+.five{
+    background-color: aqua;
+}
+
+.six{
+    background-color: orange;
+}
+
+.seven{
+    background-color: purple;
+}
+
+.par-lorem{
+    color: black;
+}
